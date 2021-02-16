@@ -39,6 +39,9 @@ body{
     width: 44%;
     display: inline-block;
     margin: 0px;
+    @keyframes identifier {
+        
+    }
 }
 .main_box_p{
     background-color: black;
@@ -180,6 +183,9 @@ li a:hover {
     background-color: black;
     display: flex;
     justify-content: space-evenly;
+}
+#contact_form{
+    display: table-caption;
 }
 @media only screen and (max-width: 780px){
     .grape_img{

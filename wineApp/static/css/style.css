@@ -64,6 +64,8 @@ body{
     background-color: whitesmoke;
     display: flex;
     align-content: space-between;
+    opacity:0.2;
+
 }
 .winery_image_box{
     width: auto;
@@ -131,6 +133,7 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
 }
 .title{
     display: flex;

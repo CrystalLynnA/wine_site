@@ -45,8 +45,15 @@
     <div class="winery_image_box">
         <img class="grape_img" src="/static/img/purplehand.jpeg" alt="">
         <div class="image_wrapper">
-            <img src="/static/img/cellarbasement2.jpeg" alt="">
+            <img id="myImg" src="/static/img/cellarbasement2.jpeg" alt="">
         </div> 
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
+        </div>
     </div>
 </body>
+<script scr="{% static 'js/wineApp.js' %}"></script>
+
 </html>

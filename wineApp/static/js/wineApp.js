@@ -1,33 +1,21 @@
-// $(document).ready(function(){
-//     // Activate Carousel
-//     $("#myCarousel").carousel();
-//     // Enable Carousel Indicators
-//     $(".item1").click(function(){
-//         $("#myCarousel").carousel(0);
-//     });
-//     $(".item2").click(function(){
-//         $("#myCarousel").carousel(1);
-//     });
-//     $(".item3").click(function(){
-//         $("#myCarousel").carousel(2);
-//     });
-//     $(".item4").click(function(){
-//         $("#myCarousel").carousel(3);
-//     });
-//     // Enable Carousel Controls
-//     $(".left").click(function(){
-//         $("#myCarousel").carousel("prev");
-//     });
-//     $(".right").click(function(){
-//         $("#myCarousel").carousel("next");
-//     });
-// });
-// $(document).ready(function(){
-//     $('button').click(function(){
-//         console.log("WORKING JS")
-//         alert("You have clicked a button!");
-//     })
-// });
+$(document).ready(function(){
+    var modal = document.getElementById('bottle1');
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    // Get the modal
+    var modal = document.getElementById('id02');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+});
 $(document).ready(function(){
     // $(".parallax").animate({'opacity':'1'},1000);       
     $(window).scroll(function(){

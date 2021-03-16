@@ -23,15 +23,46 @@
             <li><a href="/email/contact">Contact Us</a></li>
         </ul> 
     </div>
-    <div id = "MyContainer" class="container">
+    <img onclick="document.getElementById('bottle').style.display='block'" style="width:auto;" class="wineImg" src="static/img/1.png" alt="bottle 1">
+    <div id="bottle" class="modal">
+    <p class="wineInfo" >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam aspernatur itaque commodi reiciendis quae, consequatur magnam qui atque consectetur? Id accusamus hic recusandae eum aliquam nisi non ipsum alias explicabo.</p>
+    </div>
+    <img class="wineImg" src="static/img/2.png" alt="bottle 2">
+    <p class="wineInfo" >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam aspernatur itaque commodi reiciendis quae, consequatur magnam qui atque consectetur? Id accusamus hic recusandae eum aliquam nisi non ipsum alias explicabo.</p>
+    <img class="wineImg" src="static/img/3.png" alt="bottle 3">
+    <p class="wineInfo" >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam aspernatur itaque commodi reiciendis quae, consequatur magnam qui atque consectetur? Id accusamus hic recusandae eum aliquam nisi non ipsum alias explicabo.</p>
+    <!-- <button onclick="document.getElementById('bottle').style.display='block'" style="width:auto;">Login</button> -->
+    <!-- <div id="bottle" class="modal">
+        <form class="modal-content animate" action="/login" method="post">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('bottle').style.display='none'" class="close" title="Close Modal">&times;</span>
+            </div>
+            <form action="/login" method="POST">
+                {% csrf_token %}
+                <div class="container">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+                    <button type="submit">Login</button>
+                    <label><input type="checkbox" checked="checked" name="remember"> Remember me</label>
+                </div>
+            </form>
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('bottle').style.display='none'" class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+        </form>
+    </div> -->
+
+    <!-- <div id = "MyContainer" class="container">
         <div id="myCarousel" class="carousel slide">
-            <!-- Indicators -->
             <ol id="myIndicators" class="carousel-indicators">
                 <li class="item1 active"></li>
                 <li class="item2"></li>
                 <li class="item3"></li>
             </ol>
-            <!-- Wrapper for slides -->
+            Wrapper for slides 
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
                     <img src="static/img/1.png" alt="bottle 1">
@@ -49,7 +80,7 @@
                     </div>
                 </div>
             </div>
-            <!-- Left and right controls -->
+            Left and right controls
             <a class="left carousel-control" href="#myCarousel" role="button">
             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
@@ -61,7 +92,7 @@
         </div>
     </div>
 </body>
-<!-- <script>
+<script>
     $(document).ready(function(){
       // Activate Carousel
       $("#myCarousel").carousel();

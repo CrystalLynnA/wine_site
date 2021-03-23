@@ -9,6 +9,8 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
     margin: 0;
     padding: 0;
     font-weight: normal;
+    background-color: black;
+    font-family: 'Cinzel', serif;
 }
 ol, ul {
     list-style: none;
@@ -18,12 +20,10 @@ img {
     max-width: 100%;
     height: auto;
 }
-body{
-    font-family: 'Cinzel', serif;
-}
-.backgound_color{
+.wrapper{
     background-color: rgb(12, 11, 11);
-
+    display: flex;
+    justify-content: center;
 }
 .logo_container{
     width: 100%;
@@ -36,8 +36,16 @@ body{
     width: 10em;
     background-color: transparent;
 }
-.grape_img{
-    width: 36%;
+.grape1{
+    width: 32%;
+    display: inline-block;
+    margin: 0px;
+    opacity: 0.8;
+    background-color: var(--gray);
+    transition: opacity 0.1s;
+}
+.grape2{
+    width: 32%;
     display: inline-block;
     margin: 0px;
     opacity: 0.8;
@@ -219,6 +227,14 @@ li a:hover {
     width: 200px;
     display: none;
 }
+.wineImg{
+    width: 50%;
+}
+.bottlewrapper{
+    width: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
 #myImg:hover {opacity: 0.7;}  
   /* The Modal (background) */
 .modal {
@@ -241,8 +257,7 @@ li a:hover {
     display: block;
     width: 80%;
     max-width: 700px;
-  }
-  
+}
   /* Caption of Modal Image */
   #caption {
     margin: auto;
@@ -298,9 +313,6 @@ li a:hover {
     }
   }
 @media only screen and (max-width: 780px){
-    .grape_img{
-        min-width: 20%;
-    }
     .main_box{
         height: 30em;
         overflow: scroll;
@@ -348,13 +360,14 @@ li a:hover {
         overflow: inherit;
     }
     .main_box{
-        height: 30em;
+        height: fit-content;
+        background-color: transparent;
         overflow: scroll;
         display: flex;
         vertical-align: center;
     }
-    .grape_img{
-        width: 50%;
+    .grape1, .grape2{
+        width: auto;
     }
     .parallax {
         background-image: url("../img/vineyard1.jpeg");

@@ -44,6 +44,14 @@ img {
     background-color: var(--gray);
     transition: opacity 0.1s;
 }
+#grape_index{
+    width: 25%;
+    display: inline-block;
+    margin: 0px;
+    opacity: 0.8;
+    background-color: var(--gray);
+    transition: opacity 0.1s;
+}
 .grape2{
     width: 32%;
     display: inline-block;
@@ -64,7 +72,9 @@ img {
     overflow: scroll;
     border: rgb(160, 145, 145) 1em solid;
     opacity: .8;
-
+}
+.contact_container{
+    background-color: black;
 }
 .main_box{
     width: auto;
@@ -211,12 +221,12 @@ li a:hover {
 .winery_text_box{
     width: auto;
     height: fit-content;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     display: flex;
     justify-content: space-evenly;
 }
 #contact_form{
-    display: table-caption;
+    /* display: table-caption; */
 }
 #myImg {
     border-radius: 5px;

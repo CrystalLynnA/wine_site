@@ -20,27 +20,18 @@
         </ul>  
     </div> 
     <h1 class="title">Contact Us</h1>
+    <br>
     <div class="winery_text_box">
         <div id="map_container">
-            <p style="color:blue">>You will need a google map key to have google maps work</p>
-            <!-- You will need a google map key to have google maps work -->
-            <!-- <iframe
-                width="450"
-                height="250"
-                frameborder="0" style="border:0"
-                src="https://www.google.com/maps/embed/v1/view?key= YOUR OWN KEY HERE
-                &center=48.973155446119065,4.012799265902889
-                &zoom=16
-                &maptype=satellite" allowfullscreen>
-            </iframe> -->
+        <img src="/static/images/map.JPG" alt="map of France">
         </div>
-        <div class= "main_box_p">
-            <p>We are located in Azive, France.</p>
-            <p>customer_service@AlbertLaBrun.com</p>
-            <p>1234 Rue Albert Labrun, Avize, France</p>
+        <!-- <div class="contact_container"> -->
+        <div class= "main_box_p contact_container">
+            <p>Albert Lebrun</p>
+            <p>customer_service@AlbertLeBrun.com</p>
             <h1>Contact Us</h1>
             <!-- Email confirm in terminal -->
-            <form action="{%url 'contact'%}" method="post">
+            <form id="contact_form" action="{%url 'contact'%}" method="post">
                 {% csrf_token %}
                 {{ form.as_p }}
                 <div class="form-actions">
@@ -48,6 +39,7 @@
                 </div>
             </form>
         </div>
+        <!-- </div> -->
     </div>
 </body>
 </html>

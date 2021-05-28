@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
 </head>
 <body class="backgound_color">
+<div class="wrapper"></div>
     <div class="nav_wrapper">
         <ul class="nav_bar">
             <li><a href="/">Home</a></li>
@@ -31,7 +32,7 @@
     </div>
     <p class="title">Albert Lebrun</p>
     <div class="winery_image_box">
-        <img class="grape_img" src="/static/img/barrels.jpeg" alt="">
+        <img class="grape1" src="/static/img/barrels.jpeg" alt="barrel">
         <div class="image_wrapper">
             <img src="/static/img/wine1930.jpeg" alt="1934 wine bottle">
         </div> 
@@ -40,13 +41,21 @@
         <div class="image_wrapper">
             <img src="/static/img/oldbottles.jpeg" alt="old bottles">
         </div> 
-        <img class="grape_img" src="/static/img/cellarbasement.jpeg" alt="Cellar basement">
+        <img class="grape1" src="/static/img/cellarbasement.jpeg" alt="Cellar basement">
     </div>
     <div class="winery_image_box">
-        <img class="grape_img" src="/static/img/purplehand.jpeg" alt="">
+        <img class="grape2" src="/static/img/purplehand.jpeg" alt="">
         <div class="image_wrapper">
-            <img src="/static/img/cellarbasement2.jpeg" alt="">
+            <img id="myImg" src="/static/img/cellarbasement2.jpeg" alt="">
         </div> 
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
+        </div>
     </div>
+</div>
 </body>
+<script scr="{% static 'js/wineApp.js' %}"></script>
+
 </html>

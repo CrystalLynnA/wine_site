@@ -5,24 +5,25 @@ html {
 *, *:before, *:after {
     box-sizing: inherit;
 }
-body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+body {
     margin: 0;
     padding: 0;
     font-weight: normal;
+    background-color: black;
+    font-family: 'Cinzel', serif;
 }
 ol, ul {
     list-style: none;
 }
+
 img {
     max-width: 100%;
     height: auto;
 }
-body{
-    font-family: 'Cinzel', serif;
-}
-.backgound_color{
+.wrapper{
     background-color: rgb(12, 11, 11);
-
+    display: flex;
+    justify-content: center;
 }
 .logo_container{
     width: 100%;
@@ -35,25 +36,54 @@ body{
     width: 10em;
     background-color: transparent;
 }
-.grape_img{
-    width: 44%;
+.grape1{
+    width: 32%;
     display: inline-block;
     margin: 0px;
+    opacity: 0.8;
+    background-color: var(--gray);
+    transition: opacity 0.1s;
+}
+#grape_index{
+    width: 25%;
+    display: inline-block;
+    margin: 0px;
+    opacity: 0.8;
+    background-color: var(--gray);
+    transition: opacity 0.1s;
+}
+.grape2{
+    width: 32%;
+    display: inline-block;
+    margin: 0px;
+    opacity: 0.8;
+    background-color: var(--gray);
+    transition: opacity 0.1s;
 }
 .main_box_p{
-    background-color: black;
+    background-color: #0e0e0c;
+    font-family: 'Dancing Script', cursive;
     color: whitesmoke;
     display: inline-block;
-    padding: 1em;
-    font-size: 18px;
+    text-rendering: geometricPrecision;
+    text-align: center;
+    padding: 54px;
+    font-size: 36px;
     overflow: scroll;
+    border: rgb(160, 145, 145) 1em solid;
+    opacity: .8;
+}
+.contact_container{
+    background-color: black;
 }
 .main_box{
     width: auto;
-    height: fit-content;
-    background-color: black;
+    height: 30em;
+    background-color: whitesmoke;
     display: flex;
     align-content: space-between;
+    opacity:0.2;
+
 }
 .winery_image_box{
     width: auto;
@@ -61,14 +91,18 @@ body{
     background-color: black;
     display: flex;
     justify-content: space-evenly;
-    padding-left: 3em;
+    padding: 3em;
 }
 .paragraph_wrapper, .image_wrapper{
     width: 49%;
     display: flex;
     justify-content: center;
-    margin: 2em;
+    margin-top: 2em;
     border: rgb(160, 145, 145) 1em solid;
+}
+.image_wrapper{
+    margin: 2em 0em;
+
 }
 #about_div{
     width: 100%;
@@ -114,15 +148,22 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
+.parallax2{
+    background-image: url("../img/vineyard1.jpeg");
+    min-height: 30em; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
 .title{
     display: flex;
     justify-content: center;
     text-emphasis-color: grey;
     background-color: whitesmoke;
-    font-size: 2em;
-}
-li {
-    float: left;
+    font-size: 50px;
+    box-shadow: inset 0px 6px 7px 0px rgb(0 0 0 / 20%), inset 0px -6px 11px 0px rgb(179 174 174);
 }
 li a {
     display: flex;
@@ -152,9 +193,12 @@ li a:hover {
     position: sticky;
     top: 0;
     font-size: 20px;
+    text-shadow: 2px 2px 4px #000000;
+    box-shadow: inset 1px 0px 8px 12px rgb(0 0 0 / 20%), 0px 11px 6px 0px rgb(0 0 0 / 19%);
 }
 #map_container{
     display: flex;
+    width: 40%;
     justify-content: center;
     margin: 3em;
 }
@@ -177,14 +221,92 @@ li a:hover {
 .winery_text_box{
     width: auto;
     height: fit-content;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     display: flex;
     justify-content: space-evenly;
 }
-@media only screen and (max-width: 780px){
-    .grape_img{
-        min-width: 20%;
+#contact_form{
+    /* display: table-caption; */
+}
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}  
+.wineInfo{
+    width: 200px;
+    display: none;
+}
+#bottleContainer{
+    width: 200px;
+}
+.bottlewrapper{
+    width: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+#myImg:hover {opacity: 0.7;}  
+  /* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
     }
+  }
+@media only screen and (max-width: 780px){
     .main_box{
         height: 30em;
         overflow: scroll;
@@ -232,13 +354,14 @@ li a:hover {
         overflow: inherit;
     }
     .main_box{
-        height: 30em;
+        height: fit-content;
+        background-color: transparent;
         overflow: scroll;
         display: flex;
         vertical-align: center;
     }
-    .grape_img{
-        width: 50%;
+    .grape1, .grape2{
+        width: auto;
     }
     .parallax {
         background-image: url("../img/vineyard1.jpeg");
@@ -270,4 +393,23 @@ li a:hover {
         width: 8em;
         background-color: transparent;
     }
-}  
+    .grape_img{
+        width: auto;
+        display: block;
+        opacity: 0.8;
+    }
+    .main_box{
+        width: auto;
+        background-color: #9c9b9a;
+        color: whitesmoke;
+        display: block;
+        font-size: 18px;
+        overflow: scroll;
+    }
+    .main_box_p{
+        width: 100%;
+    }
+    .winery_image_box{
+        display: block;
+    }
+}
